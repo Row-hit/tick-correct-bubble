@@ -39,13 +39,17 @@ function runTimer (){
             panBox.innerHTML =` <h1 class="game-over"> GAME OVER </h1> <br>
                                 <p> Your score is ~ ${scoreVal.textContent}</p>
                             `
+            const playAgain = document.getElementById('play-again');
+            console.log(playAgain);
+            playAgain.addEventListener("click", () => {
+                pageLoad();
+            });
         }
            
     }, 1000)
 }
 
-runTimer();
-Bubbly();
+
 
 panBox.addEventListener('click',(det)=>{
     let clickNum = Number(det.target.textContent);
@@ -64,5 +68,27 @@ panBox.addEventListener('click',(det)=>{
 })
 
 
+
+let pageLoad = () => {
+    const welcomeBox = document.createElement('div');
+    welcomeBox.classList.add('welcome-box');
+    welcomeBox.innerHTML = `<h1> WELCOME </h1> <br> 
+                            <p> HIT THE CORRECT NUMBER </p> <br>
+                            <h3> PLAY THE GAME </h3>`;
+
+    const playBtn = document.createElement('button');
+    playBtn.textContent = "Start";
+
+    welcomeBox.appendChild(playBtn)
+    panBox.appendChild(welcomeBox);
+
+    playBtn.onclick = () => {
+            runTimer();
+            Bubbly();
+    }
+    
+    
+}
+pageLoad();
 
 
