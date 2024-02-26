@@ -83,8 +83,9 @@ let pageLoad = () => {
     panBox.appendChild(welcomeBox);
 
     playBtn.onclick = () => {
-            runTimer();
-            Bubbly();
+        getHit();
+        runTimer();
+        Bubbly();
     }
     
     
