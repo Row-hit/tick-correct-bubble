@@ -111,8 +111,8 @@ html,body{
         padding: 5px;
     }
     .bubble{
-        width: 10%;
-        height: 10%;
-        font-size: medium;
+        width: 8%;
+        height: 5%;
+        font-size: smaller;
     }
 }
