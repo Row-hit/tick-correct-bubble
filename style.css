@@ -53,6 +53,7 @@ html,body{
     flex-wrap: wrap;
     gap: 10px;
     overflow: hidden;
+    padding-left:20px;
 }
 .bubble{
     width: 60px;
@@ -67,7 +68,6 @@ html,body{
     transition: all ease 0.3s;
     font-size: 30px;
     animation: bubble 5s linear infinite alternate ;
-    /* transform: translateY(450px); */
 }
 .bubble:hover{
     background-color: rgb(5, 210, 18);
@@ -95,4 +95,24 @@ html,body{
     text-align: center;
     font-size: 25px;
     color:rgb(163, 128, 13);
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    #ptop{
+        padding: 0 20px;
+        font-size: small;
+        justify-content: space-evenly;
+    }
+    .box{
+        font-size: small;
+        padding: 5px;
+    }
+    .bubble{
+        width: 10%;
+        height: 10%;
+        font-size: medium;
+    }
 }
